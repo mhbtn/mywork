@@ -10,27 +10,23 @@
     <title>Document</title>
     <style>
       * {
-        /* border: 1px solid red; */
+        border: 1px solid red;
       }
     </style>
   </head>
   <body class="bg-slate-900 text-white font-inter">
-    <div class="container flex items-center justify-between px-5 py-5 mx-auto">
+      <!-- navbar -->
+    <div class="fixed flex items-center justify-between px-6 py-5 w-full">
       <div class="text-base flex items-center space-x-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
         </svg>
-        <span>My Work</span>
+        <span class="font-semibold text-xl">My Work</span>
       </div>
-      <div class="mobile-menu">
-        <a href="#" id="mobile-menu-button">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </a>
-      </div>
-      <div class="absolute bg-slate-600 top-0 left-0 w-full flex flex-col h-[100vh] -translate-x-full transition-transform duration-500" id="menu-nav">
-          <div class="absolute top-4 right-4">
+
+      <!-- menu -->
+      <div class="absolute bg-slate-600 top-0 left-0 w-full flex flex-col h-[100vh] -translate-x-full sm:-translate-x-0 sm:flex-row sm:w-auto sm:h-auto sm:static sm:items-center sm:bg-inherit transition-transform duration-500" id="menu-nav">
+          <div class="absolute top-4 right-4 sm:hidden">
             <a href="#" id="close-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -39,10 +35,23 @@
           </div>
           <a href="#" class="navigation-menu">Home</a>
           <a href="#" class="navigation-menu">My Portfolio</a>
-          <a href="#" class="navigation-menu">Contact Me</a>
+          <a href="#" class="navigation-menu">Contact Us</a>
+        </div>
+
+        <!-- mobile menu button -->
+        <div class="mobile-menu sm:hidden">
+            <a href="#" id="mobile-menu-button">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </a>
         </div>
       </div>
     </div>
+
+    <section id="home">
+        <div class="pt-32 container mx-auto">test</div>
+    </section>
 
     <script src="./js/style.js"></script>
   </body>
