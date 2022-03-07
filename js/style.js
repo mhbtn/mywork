@@ -24,10 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // document.querySelector("#dropdownNavbarLink").addEventListener("click", () => {
-  //   document.querySelector("#dropdownNavbar").classList.toggle("hidden");
-  // });
-
   window.addEventListener("click", e => {
     if (e.target == document.querySelector("#dropdownNavbarLink")) {
       document.querySelector("#dropdownNavbar").classList.toggle("hidden");
@@ -35,4 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#dropdownNavbar").classList.toggle("hidden");
     }
   });
+
+  const html = document.querySelector("html");
+  const checkbox = document.querySelector("#darklight");
+
+  checkbox.addEventListener("click", () => {
+    html.classList.toggle("dark");
+  });
+
+  toggleDarkMode();
 });
