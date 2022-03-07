@@ -13,14 +13,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // OverlayScrollbars(document.querySelector("body"), {
   //   className: "os-theme-dark",
   // });
-
-  const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-  const body = document.querySelector("body");
+  const scroll_lembut = document.querySelectorAll(".scroll-lembut");
 
   if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    body.classList.add("overflow-hidden");
-    body.setAttribute("data-scrollbar", "");
-    var Scrollbar = window.Scrollbar;
-    Scrollbar.initAll({});
+    scroll_lembut.forEach(e => {
+      e.classList.add("overflow-hidden");
+      e.setAttribute("data-scrollbar", "");
+      var Scrollbar = window.Scrollbar;
+      Scrollbar.initAll({});
+    });
   }
+
+  // document.querySelector("#dropdownNavbarLink").addEventListener("click", () => {
+  //   document.querySelector("#dropdownNavbar").classList.toggle("hidden");
+  // });
+
+  window.addEventListener("click", e => {
+    if (e.target == document.querySelector("#dropdownNavbarLink")) {
+      document.querySelector("#dropdownNavbar").classList.toggle("hidden");
+    } else {
+      document.querySelector("#dropdownNavbar").classList.toggle("hidden");
+    }
+  });
 });
