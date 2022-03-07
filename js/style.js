@@ -14,7 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //   className: "os-theme-dark",
   // });
 
-  var Scrollbar = window.Scrollbar;
+  const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  const body = document.querySelector("body");
 
-  Scrollbar.initAll({});
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    body.classList.add("overflow-hidden");
+    body.setAttribute("data-scrollbar", "");
+    var Scrollbar = window.Scrollbar;
+    Scrollbar.initAll({});
+  }
 });
