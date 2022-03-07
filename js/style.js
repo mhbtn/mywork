@@ -16,5 +16,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var Scrollbar = window.Scrollbar;
 
-  Scrollbar.initAll();
+  Scrollbar.initAll({});
 });
